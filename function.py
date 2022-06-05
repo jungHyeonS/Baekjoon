@@ -17,3 +17,37 @@
 # self_numbers = numbers - remove_set 
 # for self_num in sorted(self_numbers):
 #     print(self_num)
+
+
+# print(1-0)
+
+
+def sequence(n):
+    count = 0
+    for i in range(1,(n+1)):
+        if 100 > i:
+            count = count + 1
+        else:
+            x = [int(a) for a in str(i)]
+            des = None
+            for index,value in enumerate(x):
+                if index < (len(x)-1):
+                    if des is None:
+                        des = x[index] - x[index+1]
+                    else:
+                        newDes = x[index] - x[index+1]
+                        if(des == newDes):
+                            count = count + 1
+                        else:
+                            break
+    print(count)
+
+
+import sys
+num1 = int(sys.stdin.readline())
+sequence(num1)
+
+# 1 2 3
+# print(1-0)
+# print(0-2)
+# print(101 % 100)
