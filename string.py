@@ -22,15 +22,28 @@
 #     print(a,end=" ")
 
 
-import sys
-num1 = int(sys.stdin.readline())
-for i in range(0,num1):
-    chd = sys.stdin.readline().strip().split(" ")
-    for j in range(0,len(chd[1])):
-        print(chd[1][j] * int(chd[0]),end="")
-    print("")
+# import sys
+# num1 = int(sys.stdin.readline())
+# for i in range(0,num1):
+#     chd = sys.stdin.readline().strip().split(" ")
+#     for j in range(0,len(chd[1])):
+#         print(chd[1][j] * int(chd[0]),end="")
+#     print("")
         
 
 
 
+import sys
+chd = sys.stdin.readline().strip().lower()
+subchd = ''.join(dict.fromkeys(chd))
+res = []
+for i in range(0,len(subchd)):
+    res.append(chd.count(subchd[i]))
 
+resub = sorted(res,reverse=True)
+if len(resub) > 1 and resub[0] == resub[1]:
+    print("?")
+else:
+    tmp = max(res)
+    index = res.index(tmp)
+    print(subchd[index].upper())
