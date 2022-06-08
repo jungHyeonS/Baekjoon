@@ -33,17 +33,22 @@
 
 
 
-import sys
-chd = sys.stdin.readline().strip().lower()
-subchd = ''.join(dict.fromkeys(chd))
-res = []
-for i in range(0,len(subchd)):
-    res.append(chd.count(subchd[i]))
+# import sys
+# chd = sys.stdin.readline().strip().lower()
+# subchd = ''.join(dict.fromkeys(chd))
+# res = []
+# for i in range(0,len(subchd)):
+#     res.append(chd.count(subchd[i]))
 
-resub = sorted(res,reverse=True)
-if len(resub) > 1 and resub[0] == resub[1]:
-    print("?")
-else:
-    tmp = max(res)
-    index = res.index(tmp)
-    print(subchd[index].upper())
+# resub = sorted(res,reverse=True)
+# if len(resub) > 1 and resub[0] == resub[1]:
+#     print("?")
+# else:
+#     tmp = max(res)
+#     index = res.index(tmp)
+#     print(subchd[index].upper())
+
+
+import sys
+chd = sys.stdin.readline().strip()
+print(len(chd.split()))
