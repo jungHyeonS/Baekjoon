@@ -49,6 +49,43 @@
 #     print(subchd[index].upper())
 
 
+# import sys
+# chd = sys.stdin.readline().strip()
+# print(len(chd.split()))
+
+# chd1,chd2 = input().split()
+
+# if int(chd1[::-1]) > int(chd2[::-1]):
+#     print(chd1[::-1])
+# else:
+#     print(chd2[::-1])
+
+
+# str = ['','','','ABC','DEF','GHI','JKL','MNO','PQRS','TUV','WXYZ']
+# import sys
+# chd = sys.stdin.readline().strip()
+# time = 0
+
+# for i in chd:
+#     for j in range(0,len(str)):
+#         if i in str[j]:
+#             time = time + j
+
+# print(time)
+
+
 import sys
 chd = sys.stdin.readline().strip()
-print(len(chd.split()))
+
+str = ['c=','c-','dz=','d-','lj','nj','s=','z=']
+count = 0
+for i in range(len(chd) - 1):
+    x = chd[i] + chd[i + 1]
+    if x == 'dz' and chd[i + 2] == '=':
+        x = chd[i] + chd[i + 1] + chd[i + 2]
+    print(x)
+    # for j in str:
+    #     if x == j:
+    #         count = count + 1
+
+print(count)
