@@ -74,18 +74,27 @@
 # print(time)
 
 
-import sys
-chd = sys.stdin.readline().strip()
 
-str = ['c=','c-','dz=','d-','lj','nj','s=','z=']
-count = 0
-for i in range(len(chd) - 1):
-    x = chd[i] + chd[i + 1]
-    if x == 'dz' and chd[i + 2] == '=':
-        x = chd[i] + chd[i + 1] + chd[i + 2]
-    print(x)
-    # for j in str:
-    #     if x == j:
-    #         count = count + 1
+# 일치하는 문자열을 * 로 바꿔서 갯수 새기..
+# a = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
+# alpha = input()
+# for t in a:
+#     alpha = alpha.replace(t, '*')
 
-print(count)
+# print(len(alpha))
+
+
+
+N = int(input())
+cnt = N
+
+for i in range(N):
+    word = input()
+    for j in range(0, len(word)-1): #문자열 만크 반복
+        if word[j] == word[j+1]: #문자가 연속되면 패스
+            pass
+        elif word[j] in word[j+1:]: # 문자가 연속되지 않았을경우
+            cnt -= 1
+            break
+
+print(cnt)
