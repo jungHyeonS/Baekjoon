@@ -31,8 +31,18 @@
 
 numerator = 0
 denominator = 0
-for i in range(1,10):
-    for j in range(1,i):
-        print(j)
+ischange = 0
+for i in range(1,3):
+    for j in range(1,(i+1)):
+        if ischange == 0:
+            numerator = j
+            denominator = j
+            ischange = 1
+        elif ischange == 1:
+            numerator = j
+            denominator = i
+            # numerator = numerator + 1
+            # denominator = denominator - 1
+        print(str(numerator) + "/" + str(denominator))
 
 
