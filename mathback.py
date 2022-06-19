@@ -98,11 +98,11 @@
 
 
 
-import sys
-A,B,V = map(int,sys.stdin.readline().split())
-import math
+# import sys
+# A,B,V = map(int,sys.stdin.readline().split())
+# import math
 
-print(math.ceil((V - B) / (A-B)))
+# print(math.ceil((V - B) / (A-B)))
 
 # print(1000000000 - 99)
 # print(B-A)
@@ -116,3 +116,25 @@ print(math.ceil((V - B) / (A-B)))
 #     count = count + 1
 
 # print(count)
+
+
+
+import sys
+T = int(input())
+for i in range(0,T):
+    H,W,N = map(int,sys.stdin.readline().split())
+
+    count = 1
+    heig = 1
+    width = 1
+    while count < N:
+        if heig == H:
+            heig = 0
+            width = width + 1
+        heig = heig + 1
+        count = count+1
+
+    if width < 10:
+        width = "0" + str(width)
+
+    print(str(heig) + str(width))
