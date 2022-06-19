@@ -100,21 +100,9 @@
 
 import sys
 A,B,V = map(int,sys.stdin.readline().split())
-
-
-# print(V-(A-B))
-
-
-# 0 5 1 = 4
-# 4 5 6 = 9 3
-
-
-# v - a = 1
-
-# 5 / 4
 import math
 
-print(math.ceil(V / (A-B)))
+print(math.ceil((V - B) / (A-B)))
 
 # print(1000000000 - 99)
 # print(B-A)
